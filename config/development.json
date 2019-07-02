@@ -1,0 +1,9 @@
+{
+    "name": "My Express App -- Development",
+    "email": "dev@fmail.com",
+    "server":{
+        "host":"AWS",
+        "IP":"192.168.1.107",
+        "Uptime":"99.7%"
+    }
+}
