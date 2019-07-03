@@ -1,5 +1,6 @@
 console.log('Before');
 
+// Promise based approach
 getUser(3)
     .then(user=>{
         console.log(`Github Username: ${user.name}`)
@@ -13,6 +14,25 @@ getUser(3)
         console.log(commits);
     })
     .catch(err=>console.log(err.message));
+
+    //Async await approach
+    async function await_async()
+    {
+        try{
+            const user=await getUser(3);
+        console.log(`Github Username: ${user.name}`);
+        const repos=await getRepositries(user.name);
+        console.log(`Repositries are ${repos}`);
+        const commits=await displayCommits(repos[0]);
+        console.log(commits);
+        }
+        catch(err){
+            console.log(err.message);
+        }
+        
+    };
+    await_async();
+
 
 
 console.log('after');
